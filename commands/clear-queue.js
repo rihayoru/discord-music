@@ -3,17 +3,17 @@ const fs = require("fs")
 
 module.exports.run = async (client, message, args) => {
  
-  if(!message.member.voice.channel) return message.channel.send({embed: {color: client.colors.error, description: `${client.emotes.error} | You must be in a voice channel!` }})
+  if(!message.member.voice.channel) return message.channel.send({embed: {color: client.colors.error, description: `${client.emotes.error} | 먼저 음성채널에 들어가 주세요!` }})
 
-  if(!client.player.isPlaying(message.guild.id)) return message.channel.send({embed: {color: client.colors.error, description: `${client.emotes.error} | There is nothing playing!` }})
+  if(!client.player.isPlaying(message.guild.id)) return message.channel.send({embed: {color: client.colors.error, description: `${client.emotes.error} | 아무것도 재생중이지 않아요` }})
 
   client.player.clearQueue(message.guild.id);
 
-   message.channel.send({embed: {color: client.colors.success, description: `${client.emotes.success} | Queue cleared!` }})
+   message.channel.send({embed: {color: client.colors.success, description: `${client.emotes.success} | 대기열을 비웠어요ㄴ` }})
 
 }
 
 module.exports.config = {
-  name: "clear-queue",
-  aliases: ['cq']
+  name: "대기열삭제",
+  aliases: ['clear', "대기삭제","비워"]
 }

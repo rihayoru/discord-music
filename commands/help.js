@@ -13,6 +13,6 @@ message.channel.send(exampleEmbed)
 } 
 
 module.exports.config = {
-  name: "help",
-  aliases: ['h',"hlp"]
+  name: "음악도움",
+  aliases: ['help']
 }

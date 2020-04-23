@@ -37,11 +37,12 @@ fs.readdir("./commands/", (err, files) => {
 client.on("ready", () => {
 
     console.log("The bot is ready to play music"); //If the bot is ready it sends a message in the console
+    /*
     //It will count all voice channels in which bot is connected, if none it will return 0
     let playing = client.voice.connections.size; 
     //It will set the bot status to streaming
     client.user.setPresence({ activity: { name: `music on ${playing}`, type: "STREAMING", url: "https://twitch.tv/hydroxin" } })
-
+    */
 });
 
 client.on('message', async message => {

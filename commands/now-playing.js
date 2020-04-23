@@ -9,10 +9,10 @@ module.exports.run = async (client, message, args) => {
 
     let song = await client.player.nowPlaying(message.guild.id);
 
-    message.channel.send({embed: {color: client.colors.success, description: `${client.emotes.music} | Now Playing:\n${song.name}` }})
+    message.channel.send({embed: {color: client.colors.success, description: `${client.emotes.music} | 현재 재생중익 곡:\n${song.name}` }})
 }
 
 module.exports.config = {
-  name: "now-playing",
-  aliases: ['np']
+  name: "현재곡",
+  aliases: ['now',"뭐틀어","무슨곡"]
 }

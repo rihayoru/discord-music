@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) => {
 
   client.player.clearQueue(message.guild.id);
 
-   message.channel.send({embed: {color: client.colors.success, description: `${client.emotes.success} | 대기열을 비웠어요ㄴ` }})
+   message.channel.send({embed: {color: client.colors.success, description: `${client.emotes.success} | 대기열을 비웠어요` }})
 
 }
 

@@ -9,12 +9,12 @@ module.exports.run = async (client, message, args) => {
   
   let song = await client.player.stop(message.guild.id);
 
-  message.channel.send({embed: {color: client.colors.success, description: `${client.emotes.stop} | 노래를 멈췄어요!` }})
+  message.channel.send({embed: {color: client.colors.success, description: `${client.emotes.stop} | 노래를 멈췄어요` }})
 
 
 }
 
 module.exports.config = {
   name: "멈춰",
-  aliases: ['그만',"stop"]
+  aliases: ['정지',"나가"]
 }
